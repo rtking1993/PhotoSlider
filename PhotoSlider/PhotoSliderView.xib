@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotoSliderView" customModule="PhotoSlider" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="Y6N-kz-8ND" id="2wu-Rl-G8E"/>
+                <outlet property="pageControl" destination="6ki-FG-4TK" id="pim-MO-Sde"/>
+                <outlet property="scrollView" destination="Uch-YR-X1c" id="aN8-SO-vyb"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="Y6N-kz-8ND">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uch-YR-X1c">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="CJM-L8-Ykd"/>
+                    </connections>
+                </scrollView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="6ki-FG-4TK">
+                    <rect key="frame" x="168" y="322" width="39" height="37"/>
+                    <connections>
+                        <action selector="pageControlTap:" destination="-1" eventType="valueChanged" id="mml-U5-Rdt"/>
+                    </connections>
+                </pageControl>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="0Mf-qp-cQ7" firstAttribute="bottom" secondItem="Uch-YR-X1c" secondAttribute="bottom" id="0WQ-tn-VdO"/>
+                <constraint firstItem="Uch-YR-X1c" firstAttribute="leading" secondItem="0Mf-qp-cQ7" secondAttribute="leading" id="EGn-Ft-v9M"/>
+                <constraint firstItem="0Mf-qp-cQ7" firstAttribute="bottom" secondItem="6ki-FG-4TK" secondAttribute="bottom" constant="16" id="dlu-2c-nBs"/>
+                <constraint firstItem="Uch-YR-X1c" firstAttribute="top" secondItem="0Mf-qp-cQ7" secondAttribute="top" id="sYA-tG-g7I"/>
+                <constraint firstItem="6ki-FG-4TK" firstAttribute="centerX" secondItem="Y6N-kz-8ND" secondAttribute="centerX" id="vPl-kS-UBa"/>
+                <constraint firstItem="0Mf-qp-cQ7" firstAttribute="trailing" secondItem="Uch-YR-X1c" secondAttribute="trailing" id="vs6-Hn-En7"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="0Mf-qp-cQ7"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <integer key="value" value="5"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+        </view>
+    </objects>
+</document>
